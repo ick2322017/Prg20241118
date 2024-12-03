@@ -1,5 +1,19 @@
 
 body {
-    font-weight: bolder;
-    font-family: system-ui;
+     font-weight: bolder;
+     font-family: system-ui;
+}
+
+h1  {
+     color: skyblue;
+     background-color: black;
+}
+
+h2  {
+     color: antiquewhite;
+     background-color: black;  
+}
+
+h6  {
+     color: red;
 }
