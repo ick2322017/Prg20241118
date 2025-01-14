@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
+    <nead>
         <meta charset="UTF-8">
         <title>市川天文台-ichiten-</title>
 
@@ -8,21 +8,44 @@
     </head>  
     <body>
         <h1>市川天文台</h1>
-        <img src="main_pic.png" alt="市川天文台の写真"/>
-        <h2>宇宙を探す</h2>
-        <p>一緒に宇宙を観察してみましょう
-            <br>
-            利用案内
-        </p>
-        <h2>イベントスケジュール</h2>
-        <ul>
-            <li>星空観察会</li>
-            <li>館長の話を聞く会</li>
-        </ul>
-        <p>申し込みは下記フォームから</p>
 
-        <button onclick="location.href='./app.html'">申し込みはこちら</button>
+        <form>
+            <fieldset>
+                <legend>イベント申し込みフォーム</legend>
+                <div>
+                    <input type="radio" id="contactChoice1" name="contact"/>
+                    <iabel for="contactChoice1">星空観察会</iabel>
+                    
 
-        <h6>この天文台は実在しません</h6>
-    </body>
-</html>
+                    <input type="radio" id="contactChoice2" name="contact"/>
+                    <iabel for="contactChoice2">館長の話を聞く会</iabel>
+                </div>
+                <div>
+                    お名前
+                    <input type="text">
+                </div>
+                <div>
+                    電話番号
+                    <input type="text">
+                </div>
+            </fieldset>
+            <input type="submit" value="送　信" onclick="ques()">
+            <script>
+                function ques(){
+                    if(window.confirm("申し込みますか？")){
+                        alert("完了しました")
+                        setTimeout(() => {
+                            location.href = "./index.html"
+                        }, 3000);
+                    }else{
+                        send();
+                    }
+                }
+
+                function send(){
+                    alert("できませんでした")
+                }
+            </script>
+        </form>
+        <button onclick="location.href='./index.html'">もどる</button>
+       
